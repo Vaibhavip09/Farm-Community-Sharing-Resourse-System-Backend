@@ -21,6 +21,9 @@ public class ResourceServiceImpl implements ResourceService {
 		return resourceRepository.save(resource);
 			}
 
-	
+	@Override
+	public List<Resource> getAllResources() {
+	    return resourceRepository.findAll();
+	}
 
 }
