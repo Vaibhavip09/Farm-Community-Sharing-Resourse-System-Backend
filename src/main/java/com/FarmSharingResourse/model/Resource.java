@@ -20,7 +20,8 @@ public class Resource {
 	    @Column(length = 1000)
 	    private String description;
 	    
-
+	    
+	   
 	    
 		public Long getId() {
 			return id;
