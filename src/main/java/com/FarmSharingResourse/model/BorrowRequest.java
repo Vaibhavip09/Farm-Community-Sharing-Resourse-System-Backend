@@ -25,6 +25,9 @@ public class BorrowRequest {
     private int duration; // days
     private LocalDate pickupDate;
     
+    private String status;     
+    private String message;    
+    
 	public Long getId() {
 		return id;
 	}
@@ -81,13 +84,43 @@ public class BorrowRequest {
 		this.pickupDate = pickupDate;
 	}
 
+	
+	
+	public String getStatus() {
+		return status;
+	}
+
+	public void setStatus(String status) {
+		this.status = status;
+	}
+
+	public String getMessage() {
+		return message;
+	}
+
+	public void setMessage(String message) {
+		this.message = message;
+	}
+
 	public BorrowRequest() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
 
+//	public BorrowRequest(Long id, Long resourceId, String userName, String email, String phone, int duration,
+//			LocalDate pickupDate) {
+//		super();
+//		this.id = id;
+//		this.resourceId = resourceId;
+//		this.userName = userName;
+//		this.email = email;
+//		this.phone = phone;
+//		this.duration = duration;
+//		this.pickupDate = pickupDate;
+//	}
+
 	public BorrowRequest(Long id, Long resourceId, String userName, String email, String phone, int duration,
-			LocalDate pickupDate) {
+			LocalDate pickupDate, String status, String message) {
 		super();
 		this.id = id;
 		this.resourceId = resourceId;
@@ -96,6 +129,8 @@ public class BorrowRequest {
 		this.phone = phone;
 		this.duration = duration;
 		this.pickupDate = pickupDate;
+		this.status = status;
+		this.message = message;
 	}
     
     

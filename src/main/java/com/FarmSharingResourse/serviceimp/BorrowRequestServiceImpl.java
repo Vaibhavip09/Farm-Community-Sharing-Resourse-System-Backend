@@ -1,5 +1,7 @@
 package com.FarmSharingResourse.serviceimp;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -15,10 +17,19 @@ public class BorrowRequestServiceImpl implements BorrowRequestService {
 	 @Autowired
 	    private BorrowRequestRepository borrowRequestRepo;
 
-	@Override
-	public BorrowRequest createBorrowRequest(BorrowRequest request) {
-		
-		return borrowRequestRepo.save(request);
-	}
+	    @Override
+	    public BorrowRequest createBorrowRequest(BorrowRequest request) {
+	        return borrowRequestRepo.save(request);
+	    }
+
+	    @Override
+	    public List<BorrowRequest> findAll() {
+	        return borrowRequestRepo.findAll();
+	    }
+
+	    @Override
+	    public List<BorrowRequest> findByUserName(String username) {
+	        return borrowRequestRepo.findByUserName(username);
+	    }
 
 }
