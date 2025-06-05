@@ -10,4 +10,5 @@ import com.FarmSharingResourse.model.Login;
 @Repository
 public interface LoginRepo extends JpaRepository<Login, Integer> {
 	 Login findByUsernameAndPassword(String username, String password);
+	 
 }
