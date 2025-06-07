@@ -11,5 +11,8 @@ public interface BorrowRequestService {
 	List<BorrowRequest> findAll();
 
 	List<BorrowRequest> findByUserName(String username);
-	
+	 BorrowRequest getRequestById(Long id);
+	    BorrowRequest updateRequest(Long id, BorrowRequest request);
+	    void deleteRequest(Long id);
+	    BorrowRequest updateStatus(Long id, String status);
 }

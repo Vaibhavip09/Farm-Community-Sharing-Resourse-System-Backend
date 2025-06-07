@@ -10,6 +10,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.FarmSharingResourse.dto.LoginRequest;
+import com.FarmSharingResourse.dto.LoginRequest;
 import com.FarmSharingResourse.model.Admin;
 import com.FarmSharingResourse.service.AdminService;
 
@@ -26,12 +28,16 @@ public class AdminController {
 	    private AdminService adminService;
 
 	    @PostMapping("/login")
-	    public ResponseEntity<String> login(@RequestBody String username,String password) {
-	        if (adminService.authenticate(username, password)) {
-	            return ResponseEntity.ok("User login successful");
-	        } else {
-	            return ResponseEntity.status(401).body("Invalid username or password");
-	        }
+	    public ResponseEntity<String> login(@RequestBody LoginRequest request) {
+	    	 String username = request.getUsername();
+	         String password = request.getPassword();
+
+	         if (adminService.authenticate(username, password)) {
+	             return ResponseEntity.ok("User login successful");
+	         } else {
+	             return ResponseEntity.status(401).body("Invalid username or password");
+	         }
+	    
 	    }
 	    @GetMapping("/home")
 	    public ResponseEntity<String> getUserHome() {
