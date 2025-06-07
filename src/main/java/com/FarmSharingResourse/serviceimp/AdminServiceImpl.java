@@ -8,7 +8,8 @@ import com.FarmSharingResourse.service.AdminService;
 
 @Service
 public class AdminServiceImpl implements AdminService {
-
+	
+	
 	@Override
 	public boolean authenticate(String username, String password) {
         return "admin".equals(username) && "admin963".equals(password);

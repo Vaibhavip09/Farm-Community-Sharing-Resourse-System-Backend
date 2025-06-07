@@ -21,8 +21,6 @@ import com.FarmSharingResourse.service.AdminService;
 @RequestMapping("/admin")
 @CrossOrigin(origins = "*")
 public class AdminController {
-	
-	
 
 	    @Autowired
 	    private AdminService adminService;

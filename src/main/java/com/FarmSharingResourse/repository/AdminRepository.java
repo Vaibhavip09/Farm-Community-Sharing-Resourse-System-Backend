@@ -8,7 +8,6 @@ import com.FarmSharingResourse.model.Admin;
 @Repository
 public interface AdminRepository extends JpaRepository<Admin, Integer> {
 	 static Admin findByUsernameAndPassword(String username, String password) {
-		// TODO Auto-generated method stub
 		return null;
 	}
 }

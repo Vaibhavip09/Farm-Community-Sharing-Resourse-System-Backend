@@ -22,7 +22,6 @@ public class Admin {
 	    @Column(nullable = false)
 	    private String password;
 
-	    // Getters and setters
 	    public Integer getId() {
 	        return id;
 	    }
