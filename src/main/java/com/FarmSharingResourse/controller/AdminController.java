@@ -31,7 +31,7 @@ public class AdminController {
 	         String password = request.getPassword();
 
 	         if (adminService.authenticate(username, password)) {
-	             return ResponseEntity.ok("User login successful");
+	             return ResponseEntity.ok("Admin login successful");
 	         } else {
 	             return ResponseEntity.status(401).body("Invalid username or password");
 	         }
