@@ -32,6 +32,11 @@ public class JoinRequestServiceImpl implements JoinRequestService {
 	        }
 	        return null;
 	    }
+	    
+	    @Override
+	    public List<JoinRequest> getJoinRequestsByEmail(String email) {
+	        return repository.findByEmail(email);
+	    }
 
 	    public void deleteRequest(Long id) {
 	        repository.deleteById(id);

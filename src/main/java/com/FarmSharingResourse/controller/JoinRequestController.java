@@ -42,6 +42,12 @@ public class JoinRequestController {
     public JoinRequest updateStatus(@RequestParam Long id, @RequestParam String status) {
         return joinRequestService.updateStatus(id, status);
     }
+    
+    
+    @GetMapping("/status")
+    public List<JoinRequest> getStatusByEmail(@RequestParam String email) {
+        return joinRequestService.getJoinRequestsByEmail(email);
+    }
 
     // 🔹 Delete a request
     @DeleteMapping("/delete/{id}")
